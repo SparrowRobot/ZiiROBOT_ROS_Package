@@ -1,0 +1,6 @@
+<launch>
+    <include file="get_imu_and_ecd.launch"/>
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
+        <rosparam command="load" file="$(find ziirobot)/params/imu_and_ecd.yaml"/>
+    </node>
+</launch>

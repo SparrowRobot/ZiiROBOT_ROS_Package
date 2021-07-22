@@ -1,0 +1,6 @@
+<launch>
+    <node name="pico_imu_ecd_node" pkg="rosserial_python" type="serial_node.py">
+        <param name="port" type="string" value="/dev/serial/by-id/usb-Arduino_RaspberryPi_Pico_385860E62D641983-if00"/>
+    </node>
+    <node name="ecd_speed_to_odom_node" pkg="ziirobot" type="pico_ecd_speed_to_odom_node"/>
+</launch>
